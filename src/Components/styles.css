@@ -1,0 +1,925 @@
+/* ───────────────── ABOUT SECTION ───────────────── */
+:root {
+  --ink: #0a0a0a;
+  --cream: #f5f0e8;
+  --white: #ffffff;
+  --cyan: #00d4e8;
+  --magenta: #e8006a;
+  --yellow: #f5c800;
+  --mid: #1a1a2e;
+  --muted: #6b6b6b;
+  --border: rgba(0, 0, 0, 0.08);
+}
+
+.aboutSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 85vh;
+  align-items: stretch;
+}
+
+.aboutVisual {
+  background: var(--ink);
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.aboutVisualInner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 4rem;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+}
+
+.aboutVisualBackground {
+  position: absolute;
+  inset: 0;
+  font-family: "Bebas Neue";
+  font-size: 12rem;
+  color: rgba(0, 212, 232, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -0.02em;
+  pointer-events: none;
+}
+
+.aboutVisualContent {
+  position: relative;
+  z-index: 2;
+}
+
+.aboutBigYear {
+  font-family: "Bebas Neue";
+  font-size: 6rem;
+  color: var(--white);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.aboutBigYearHighlight {
+  font-size: 2rem;
+  color: var(--cyan);
+  vertical-align: super;
+}
+
+.aboutYearCaption {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+.aboutAccentStripes {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--cyan) 0px,
+    var(--cyan) 60px,
+    var(--magenta) 60px,
+    var(--magenta) 120px,
+    var(--yellow) 120px,
+    var(--yellow) 180px,
+    transparent 180px,
+    transparent 240px
+  );
+  opacity: 0.6;
+}
+
+.aboutContent {
+  padding: 6rem 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--cream);
+}
+
+.sectionTag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--magenta);
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sectionTag::before {
+  content: "";
+  display: block;
+}
+
+.sectionHeading {
+  font-family: "Bebas Neue";
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 0.95;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+  margin-bottom: 2rem;
+}
+
+.sectionHeadingHighlight {
+  font-style: normal;
+  color: var(--magenta);
+}
+
+.aboutDescription {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: #444;
+  font-weight: 300;
+  max-width: 460px;
+  margin-bottom: 3rem;
+}
+
+.aboutPillarsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.aboutPillarCard {
+  border-left: 3px solid var(--cyan);
+  padding: 12px 16px;
+  background: rgba(0, 212, 232, 0.04);
+  border-radius: 0 4px 4px 0;
+}
+
+.aboutPillarTitle {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.aboutPillarText {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ───────────────── SERVICES SECTION ───────────────── */
+
+.servicesSection {
+  background: var(--ink);
+  padding: 7rem 5vw;
+}
+
+.servicesHeader {
+  margin-bottom: 4rem;
+}
+
+.servicesHeader .sectionTag {
+  color: var(--yellow);
+}
+
+.servicesHeader .sectionTag::before {
+  background: var(--yellow);
+}
+
+.servicesHeader .sectionHeading {
+  color: var(--white);
+}
+
+.servicesHeader .sectionHeadingHighlight {
+  color: var(--cyan);
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.serviceCard {
+  background: var(--ink);
+  padding: 2.5rem 2rem;
+  transition: background 0.3s;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceCard::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--cyan);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.serviceCard:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.serviceCard:hover::after {
+  transform: scaleX(1);
+}
+
+.serviceNumber {
+  font-family: "Bebas Neue";
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.08);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.serviceIcon {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.serviceTitle {
+  font-family: "Bebas Neue";
+  font-size: 1.6rem;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.serviceDescription {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.38);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* Mobile */
+@media (max-width: 580px) {
+  .servicesGrid {
+    display: block;
+    background: rgba(255, 255, 255, 0.06);
+  }
+}
+/* ───────────────── MACHINES SECTION ───────────────── */
+
+.machinesSection {
+  padding: 7rem 5vw;
+  background: var(--cream);
+}
+
+.machinesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 4rem;
+}
+
+.machinePanel {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  background: var(--ink);
+  border-radius: 6px;
+  cursor: default;
+}
+
+/* .machinePanelBackground {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+
+  font-family: "Bebas Neue";
+  font-size: clamp(4rem, 10vw, 8rem);
+
+  color: rgba(0, 212, 232, 0.05);
+  letter-spacing: 0.02em;
+
+  padding: 1rem;
+  text-align: center;
+} */
+
+.machinePanelContent {
+  position: absolute;
+  inset: 0;
+
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.88) 0%, transparent 65%);
+
+  z-index: 2;
+}
+.machinePanelBackground {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  font-family: "Bebas Neue";
+  font-size: clamp(4rem, 10vw, 8rem);
+
+  color: rgba(255, 255, 255, 0.12);
+  letter-spacing: 0.02em;
+
+  padding: 1rem;
+  text-align: center;
+}
+.machineLabel {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 0.75rem;
+}
+
+.machineName {
+  font-family: "Bebas Neue";
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--white);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.machineName p {
+  margin-top: 6px;
+  font-size: inherit;
+  line-height: 1;
+}
+
+.machineDescription {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+  font-weight: 300;
+  max-width: 340px;
+}
+
+.machineTag {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+  background: var(--magenta);
+  color: #fff;
+
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  padding: 6px 14px;
+  border-radius: 2px;
+
+  z-index: 3;
+}
+
+/* ───────────────── TABLET ───────────────── */
+
+@media (max-width: 900px) {
+  .machinesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .machinePanel {
+    min-height: 380px;
+  }
+
+  .machinePanelContent {
+    padding: 2.5rem;
+  }
+
+  .machineDescription {
+    max-width: 100%;
+  }
+}
+
+/* ───────────────── MOBILE ───────────────── */
+
+@media (max-width: 580px) {
+  .machinesSection {
+    padding: 5rem 1.25rem;
+  }
+
+  .machinesGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 3rem;
+  }
+
+  .machinePanel {
+    min-height: 340px;
+  }
+
+  .machinePanelBackground {
+    font-size: 4rem;
+  }
+
+  .machinePanelContent {
+    padding: 1.5rem;
+  }
+
+  .machineTag {
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.6rem;
+    padding: 5px 10px;
+  }
+
+  .machineLabel {
+    font-size: 0.62rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .machineName {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .machineDescription {
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+}
+
+/* ───────────────── PORTFOLIO SECTION ───────────────── */
+
+.portfolioSection {
+  padding: 7rem 5vw;
+  background: #f0ebe0;
+}
+
+.portfolioHeader {
+  margin-bottom: 3.5rem;
+}
+
+.portfolioTag {
+  color: var(--magenta);
+}
+
+/* .activePortfolioTab {
+  background: var(--ink);
+  color: var(--white);
+} */
+
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+@media (max-width: 580px) {
+  .portfolioGrid {
+    display: block;
+  }
+}
+.portfolioItem {
+  background: var(--ink);
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  position: relative;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.portfolioItemInner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bebas Neue";
+  transition: transform 0.4s ease;
+  height: 100%;
+  width: 100%;
+}
+
+.portfolioItem:hover .portfolioItemInner {
+  transform: scale(1.05);
+}
+
+.portfolioOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  transition: background 0.3s;
+}
+
+.portfolioItem:hover .portfolioOverlay {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.portfolioLabel {
+  font-family: "Bebas Neue";
+  font-size: 1.3rem;
+  color: var(--white);
+  letter-spacing: 0.06em;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+}
+
+.portfolioItem:hover .portfolioLabel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Portfolio Background Variants */
+
+.portfolioColorOne {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.portfolioColorTwo {
+  background: linear-gradient(135deg, #2e1a1a 0%, #4a1515 100%);
+}
+
+.portfolioColorThree {
+  background: linear-gradient(135deg, #1a2e1a 0%, #153015 100%);
+}
+
+.portfolioColorFour {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2e1a4a 100%);
+}
+
+.portfolioColorFive {
+  background: linear-gradient(135deg, #2e2a1a 0%, #4a3a10 100%);
+}
+
+.portfolioColorSix {
+  background: linear-gradient(135deg, #1a2a2e 0%, #0f3040 100%);
+}
+
+.portfolioIcon {
+  font-size: 3.5rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.portfolioTabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+  flex-wrap: wrap;
+
+  margin: 0 auto 3.5rem;
+  width: 100%;
+}
+
+.portfolioTab {
+  padding: 16px 24px;
+  border-radius: 5px;
+  border-color: transparent;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.portfolioTab:hover {
+  transform: translateY(-2px);
+
+  border-color: transparent;
+
+  background: var(--magenta);
+  color: var(--white);
+
+  /* box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06); */
+}
+
+.activePortfolioTab {
+  background: var(--magenta);
+  color: var(--white);
+
+  border-color: transparent;
+
+  /* box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18); */
+}
+.portfolioImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ───────────────── MOBILE ───────────────── */
+
+@media (max-width: 580px) {
+  .portfolioTabs {
+    justify-content: flex-start;
+
+    overflow-x: auto;
+    flex-wrap: nowrap;
+
+    padding-bottom: 8px;
+
+    scrollbar-width: none;
+  }
+
+  .portfolioTabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .portfolioTab {
+    flex-shrink: 0;
+
+    padding: 10px 18px;
+
+    font-size: 0.72rem;
+  }
+}
+
+/* ───────────────── WHY US SECTION ───────────────── */
+.whySection {
+  background: var(--ink);
+  padding: 7rem 5vw;
+}
+
+.whyHeader {
+  margin-bottom: 4rem;
+}
+
+.whyHeader .sectionTag {
+  color: var(--cyan);
+}
+
+.whyHeader .sectionTag::before {
+  background: var(--cyan);
+}
+
+.whyHeader .sectionHeading {
+  color: var(--white);
+}
+
+.whyHeader .sectionHeading em {
+  color: var(--yellow);
+}
+
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 580px) {
+  .whyGrid {
+    display: block;
+  }
+}
+.whyCard {
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 4px;
+  transition:
+    border-color 0.3s,
+    transform 0.3s;
+}
+
+.whyCard:hover {
+  border-color: var(--cyan);
+  transform: translateY(-4px);
+}
+
+.whyCardIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 3px;
+  background: rgba(0, 212, 232, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.whyCardTitle {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.45rem;
+  color: var(--white);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.whyCardDescription {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.42);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+/* ───────────────── CLIENTS SECTION ───────────────── */
+
+.clientsSection {
+  padding: 7rem 5vw;
+  background: var(--cream);
+}
+
+.clientsHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.clientsMarqueeWrapper {
+  overflow: hidden;
+}
+
+.clientsTrack {
+  display: inline-flex;
+  gap: 0;
+  animation: clientsScroll 30s linear infinite;
+  white-space: nowrap;
+}
+
+.marginTop10 {
+  margin: 50px;
+}
+
+.clientPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 36px;
+  border: 1px solid var(--border);
+  margin-right: 12px;
+  border-radius: 3px;
+  background: var(--white);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  min-width: 160px;
+  text-align: center;
+}
+
+@keyframes clientsScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.clientLogoWrapper {
+  width: 180px;
+  height: 100px;
+  background: var(--white);
+  /* border: 1px solid var(--border); */
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px;
+  margin-right: 50px;
+  flex-shrink: 0;
+}
+
+.clientLogoImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ───────────────── CTA SECTION ───────────────── */
+
+.ctaSection {
+  background: var(--magenta);
+  padding: 8rem 5vw;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaBackgroundText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Bebas Neue";
+  font-size: clamp(6rem, 15vw, 18rem);
+  color: rgba(255, 255, 255, 0.06);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 2;
+}
+
+.ctaHeading {
+  font-family: "Bebas Neue";
+  font-size: clamp(3.5rem, 8vw, 8rem);
+  color: var(--white);
+  letter-spacing: 0.02em;
+  line-height: 0.95;
+  margin-bottom: 1.5rem;
+}
+
+.ctaDescription {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 480px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 16px 48px;
+  margin: 10px 30px;
+  background: var(--white);
+  color: var(--magenta);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  opacity: 0.95;
+}
+
+.ctaButtonsContainer {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* ── WHATSAPP FLOAT ── */
+.whatsappFloatButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 998;
+  width: 54px;
+  height: 54px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: transform 0.2s;
+}
+.whatsappFloatButton:hover {
+  transform: scale(1.1);
+}

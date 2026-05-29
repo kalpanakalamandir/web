@@ -1,0 +1,283 @@
+/* ───────────────── FOOTER SECTION ───────────────── */
+
+.footerSection {
+  background: #050505;
+  padding: 5rem 5vw 2.5rem;
+}
+
+.footerTop {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footerBrandLogo {
+  font-family: "Bebas Neue";
+  font-size: 2.2rem;
+  color: var(--white);
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.footerBrandLogoHighlight {
+  color: var(--cyan);
+}
+
+.footerBrandDescription {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.35);
+  line-height: 1.8;
+  max-width: 280px;
+  margin-bottom: 1.75rem;
+  font-weight: 300;
+}
+
+.footerSocials {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.socialButton {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background 0.2s;
+}
+
+.socialButton:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: rgba(0, 212, 232, 0.06);
+}
+
+.socialButtonFacebook:hover {
+  border-color: #1877f2;
+  color: #1877f2;
+  background: rgba(24, 119, 242, 0.06);
+}
+
+.socialButtonInstagram:hover {
+  border-color: #e1306c;
+  color: #e1306c;
+  background: rgba(225, 48, 108, 0.06);
+}
+
+.socialButtonYoutube:hover {
+  border-color: #ff0000;
+  color: #ff0000;
+  background: rgba(255, 0, 0, 0.06);
+}
+
+.socialButtonLinkedin:hover {
+  border-color: #0a66c2;
+  color: #0a66c2;
+  background: rgba(10, 102, 194, 0.06);
+}
+
+.socialButtonTwitter:hover {
+  border-color: #000;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.socialButtonWhatsapp:hover {
+  border-color: #25d366;
+  color: #25d366;
+  background: rgba(37, 211, 102, 0.06);
+}
+
+.footerColumnTitle {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.5rem;
+}
+
+.footerLinksList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerLink {
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.38);
+  font-weight: 300;
+  transition: color 0.2s;
+}
+
+.footerLink:hover {
+  color: var(--cyan);
+}
+
+.footerContactItem {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footerContactIcon {
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 212, 232, 0.1);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footerContactText {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.38);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.footerContactLink {
+  color: rgba(255, 255, 255, 0.38);
+  text-decoration: none;
+  font-size: 0.82rem;
+  display: block;
+  line-height: 1.6;
+  font-weight: 300;
+  transition: color 0.2s;
+}
+
+.footerContactLink:hover {
+  color: var(--cyan);
+}
+
+.footerBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footerBottomText {
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 300;
+}
+
+.footerBottomTagline {
+  font-family: "Bebas Neue";
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.12);
+  letter-spacing: 0.15em;
+}
+
+/* ───────────────── WHATSAPP FLOAT ───────────────── */
+
+.whatsappFloatButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 998;
+  width: 54px;
+  height: 54px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: transform 0.2s;
+}
+
+.whatsappFloatButton:hover {
+  transform: scale(1.1);
+}
+
+/* ───────────────── ANIMATION ───────────────── */
+
+.fadeUp {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.fadeUpVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ───────────────── RESPONSIVE ───────────────── */
+
+@media (max-width: 900px) {
+  .servicesGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .machinesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolioGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .whyGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footerTop {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .aboutSection {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutVisual {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 580px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolioGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .whyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .footerTop {
+    grid-template-columns: 1fr;
+  }
+}

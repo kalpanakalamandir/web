@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Playfair+Display:wght@700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink: #0a0a0a;
+  --cream: #f5f0e8;
+  --white: #ffffff;
+  --cyan: #00d4e8;
+  --magenta: #e8006a;
+  --yellow: #f5c800;
+  --mid: #1a1a2e;
+  --muted: #6b6b6b;
+  --border: rgba(0, 0, 0, 0.08);
+  --font-display: "Bebas Neue";
+  --font-body: "DM Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* ── SHARED TYPOGRAPHY ── */
+.section-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--magenta);
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-tag::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+}
+
+.section-h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 0.95;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+  margin-bottom: 2rem;
+}
+.section-h2 em {
+  font-style: normal;
+  color: var(--magenta);
+}
+
+/* ── SHARED BUTTONS ── */
+.btn-primary {
+  display: inline-block;
+  padding: 14px 36px;
+  background: var(--magenta);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 14px 36px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+  cursor: pointer;
+  background: none;
+}
+.btn-outline:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.btn-white {
+  display: inline-block;
+  padding: 16px 48px;
+  background: var(--white);
+  color: var(--magenta);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.btn-white:hover {
+  transform: translateY(-3px);
+  opacity: 0.95;
+}
+
+/* ── FADE UP ANIMATION ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
