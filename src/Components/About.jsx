@@ -6,10 +6,7 @@ const About = () => {
     <section id="about" className="aboutSection">
       <div className="aboutVisual">
         <div className="aboutVisualInner">
-          <div className="aboutVisualBackground">
-            KKM
-            {/* <img src={Logo} alt={"KKM Logo"} className="logoIcon" /> */}
-          </div>
+          <div className="aboutVisualBackground">KKM</div>
 
           <div className="aboutAccentStripes"></div>
 
@@ -47,7 +44,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="aboutPillarCard" data-aos="fade-down-left">
+          <div className="aboutPillarCard" data-aos="zoom-in">
             <h4 className="aboutPillarTitle">Corporate Branding</h4>
 
             <p className="aboutPillarText">
@@ -63,7 +60,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="aboutPillarCard" data-aos="fade-down-left">
+          <div className="aboutPillarCard" data-aos="zoom-in">
             <h4 className="aboutPillarTitle">Indoor Branding</h4>
 
             <p className="aboutPillarText">

@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-import CompanyBrandingImg1 from "../Assets/ProjectImages/CompanyBrandingSignage_Images/Signage_ImgID1.png";
 import CompanyBrandingImg2 from "../Assets/ProjectImages/CompanyBrandingSignage_Images/Signage_ImgID2.png";
-import CompanyBrandingImg3 from "../Assets/ProjectImages/CompanyBrandingSignage_Images/Signage_ImgID3.png";
 import CompanyBrandingImg4 from "../Assets/ProjectImages/CompanyBrandingSignage_Images/Signage_ImgID4.png";
 
 import ImgID1 from "../Assets/ProjectImages/CompanyBrandingSignage2_Images/ImgID1.png";
@@ -12,7 +10,6 @@ import ImgID3 from "../Assets/ProjectImages/CompanyBrandingSignage2_Images/ImgID
 import ImgID4 from "../Assets/ProjectImages/CompanyBrandingSignage2_Images/ImgID4.png";
 import ImgID5 from "../Assets/ProjectImages/CompanyBrandingSignage3_Images/ImgID1.png";
 import ImgID6 from "../Assets/ProjectImages/CompanyBrandingSignage3_Images/ImgID2.png";
-import ImgID7 from "../Assets/ProjectImages/CompanyBrandingSignage3_Images/ImgID3.png";
 import ImgID8 from "../Assets/ProjectImages/CompanyBrandingSignage3_Images/ImgID4.png";
 
 import NeonImgID1 from "../Assets/ProjectImages/NeonAcrylicBoards_Images/ImgID1.png";
@@ -32,9 +29,7 @@ import OnRoad_ImgID4 from "../Assets/ProjectImages/OnRoadBrandingSignage_Images/
 
 const portfolioData = {
   "Companny Branding Signage": [
-    // { id: 1, name: "CompanyBrandingImg_ID1", image: CompanyBrandingImg1 },
     { id: 2, name: "CompanyBrandingImg_ID2", image: CompanyBrandingImg2 },
-    // { id: 3, name: "CompanyBrandingImg_ID3", image: CompanyBrandingImg3 },
     { id: 4, name: "CompanyBrandingImg_ID4", image: CompanyBrandingImg4 },
 
     { id: 11, name: "Clients_ImgID1", image: ImgID1 },
@@ -43,7 +38,6 @@ const portfolioData = {
     { id: 14, name: "Clients_ImgID4", image: ImgID4 },
     { id: 15, name: "Clients_ImgID4", image: ImgID5 },
     { id: 16, name: "Clients_ImgID4", image: ImgID6 },
-    // { id: 7, name: "Clients_ImgID4", image: ImgID7 },
     { id: 18, name: "Clients_ImgID4", image: ImgID8 },
   ],
 
